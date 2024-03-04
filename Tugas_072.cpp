@@ -10,7 +10,7 @@ int main(){
 
     cout << "Masukkan Nilai Fisika = ";
     cin >> nFIS;
-    nRerata = nMTK + nFIS / 2;
+    nRerata = (nMTK + nFIS) / 2;
 
     if(nRerata >= 60){
         status = "Lulus";
@@ -18,10 +18,14 @@ int main(){
     else if(nMTK >= 70){
         status = "Lulus";
     }
+    else if(nRerata < 60){
+        status = "Tidak Lulus";
+    }
     else{
         status = "Tidak Lulus";
     }
     cout << "Tampilkan Status = " << status << endl;
 
     return 0;
+
 }
